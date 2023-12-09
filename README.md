@@ -16,6 +16,28 @@ This repo contains some code snippets written in go.
 
   go build -ldflags=-w
 
+
+  # modules
+
+  go mod verify - this will verify that the checksums of the downloaded packages on your machine match the entries in go.sum
+
+  go mod download - download all the dependencies for the project
+
+  ## upgrading packages 
+
+  go get -u github.com/foo/bar
+
+  go get -u github.com/foo/bar@v2.0.0
+
+  ## removing packages
+
+  go get github.com/foo/bar@none
+
+  go mod tidy 
+# Information / documentation
+
+go doc PACKAGE_NAME
+
 # Tests
 
 ## Benchmarking
@@ -33,3 +55,10 @@ This repo contains some code snippets written in go.
 ## More 
 
   go test --help
+
+# Go workspace 
+
+go work init name - name new workspace 
+
+go work use name -add new folder to workspace 
+
